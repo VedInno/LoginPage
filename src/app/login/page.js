@@ -15,6 +15,9 @@ export default function LoginPage() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
+        <div className={styles.logoContainer}>
+          <img src="/logo.png" alt="Innoage Logo" className={styles.logo} />
+        </div>
         <h2 className={styles.title}>Welcome To Innoage</h2>
         <p className={styles.subtitle}>Sign in to your account</p>
         <form onSubmit={handleSubmit} className={styles.form}>

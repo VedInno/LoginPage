@@ -20,6 +20,7 @@ export default function SignupPage() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
+      <img src="/logo.svg" alt="Innoage Logo" className={styles.logo} />
         
         <p className={styles.subtitle}>Reset Your Password</p>
         <form onSubmit={handleSubmit} className={styles.form}>

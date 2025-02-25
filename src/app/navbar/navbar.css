@@ -1,7 +1,7 @@
-/* Elegant Navbar */
+/* Navbar */
 .navbar {
-    background: linear-gradient(135deg, #12121A, #707BFF); /* Smooth gradient */
-    color: white;
+    background: linear-gradient(135deg, #FFFFFF, #FFFFFF);
+    color: black;
     padding: 14px 24px;
     position: fixed;
     top: 0;
@@ -15,83 +15,118 @@
     border-radius: 10px;
   }
   
-  /* Navbar container */
+  /* Navbar Container */
   .navbar-container {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+        
   }
   
-  /* Logo & Brand */
+  /* Logo */
   .logo-container {
     display: flex;
     align-items: center;
   }
   
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
   }
   
   .brand-name {
-    font-size: 20px;
+    background: linear-gradient(135deg, #707BFF, #D65DFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
+    font-size: 24px;
     margin-left: 10px;
   }
   
   /* Navigation Links */
   .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    margin-left: 155px;
+  }
+  .nav-link1 svg {
+    font-size: 24px; /* Adjust the size as needed */
+   color:#2B2E4A /* Optional: Change color */
+    
   }
   
   .nav-link {
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    transition: all 0.3s ease-in-out;
     padding: 8px 12px;
     border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    position:relative;
+    overflow: hidden;
+    
   }
-  
+  .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between Profile and Cart */
+  }
   .nav-link:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
   }
   
-  /* Profile Dropdown */
   .profile-dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
   }
   
+  /* Profile Button */
   .profile-btn {
-    background: none;
-    color: white;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #2B2E4A, #9670FF);
     border: none;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 25px;
     cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background 0.3s;
+    transition: all 0.3s ease-in-out;
+    color: white;
   }
   
   .profile-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #2B2E4A;
+  }
+  .nav-item {
+  position: relative;
+  display: inline-block;
+}
+  
+  /* Profile Picture */
+  .profile-pic {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid white;
+    object-fit: cover;
+    margin-right: 5px;
   }
   
-  /* Dropdown Menu */
+  /* Profile Dropdown Menu */
   .dropdown-menu {
     position: absolute;
     right: 0;
-    background: #fff;
+    background: white;
     border-radius: 8px;
     overflow: hidden;
     width: 160px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     margin-top: 5px;
-  }
+  } 
   
   .dropdown-item {
     display: block;
@@ -114,5 +149,47 @@
     background: none;
     cursor: pointer;
     font-size: 14px;
+  }
+  
+  /* 🔹 Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .cart .nav-link1:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
+  
+    .nav-links.mobile-show {
+      display: flex;
+    }
+  
+    .menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    .profile-btn {
+      padding: 6px 10px;
+    }
+  }
+  
+  /* Desktop: Hide Menu Button */
+  @media (min-width: 769px) {
+    .menu-btn {
+      display: none;
+    }
   }
   
